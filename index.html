@@ -16,26 +16,20 @@
     <script src='./assets/js/jquery-3.6.0.min.js'></script>
     <script src="./assets/js/jquery.sidr.min.js"></script>
     <script src="./assets/js/wow.min.js"></script>
-
-    <script>
-        function initFunction(jsonObj) {
-            renderInfo(jsonObj);
-        }
-    </script>
 </head>
 
-<body id="scene">
+<body id="indexTop">
     <header>
         <div class="wrap">
             <div class="logo_side">
-                <a href="index.html" class="logo"><img src="./upload/logo.png" alt=""></a>
+                <a href="#indexTop" class="logo navLinkIndex" id="logo" data-target="indexTop"><img
+                        src="./upload/logo.png" alt=""></a>
                 <div id="menu-toggle" class="menu-icon">
                     <span></span>
                     <span></span>
                     <span></span>
                 </div>
             </div>
-
             <nav id="sidr">
                 <a href="#topic_about" id="page_about" class="navLinkIndex" data-target="topic_about">ABOUT DATE</a>
                 <a href="#topic_speaker" id="page_speaker" class="navLinkIndex" data-target="topic_speaker">講師陣容</a>
@@ -45,23 +39,22 @@
                 <a href="https://info.taiwantrade.com/" target="_blank" class="">
                     <img src="./assets/img/icon_home.svg" alt="">
                 </a>
-
             </nav>
         </div>
     </header>
     <main>
-        <section class="areaMainBN">
+        <section class="areaMainBN wow fadeIn" data-wow-offset="1" data-wow-duration="1s">
             <div class="wrap">
                 <img src="./upload/topBN.jpg" alt="">
             </div>
         </section>
-        <section class="areaAbout" id="topic_about">
+        <section class="areaAbout wow fadeIn" data-wow-offset="1" data-wow-duration="1s" id="topic_about">
             <div class="wrap">
                 <!-- <h1 class="gradient-text">2025 DATE SUMMIT</h1> -->
                 <div class="aboutInfo">
                     <div class="ytSide">
                         <ul class="tabs groupYT">
-                            <li class="active" rel="tabYt1">2024.9.5 精彩回顧</li>
+                            <li rel="tabYt1" class="active">2024.9.5 精彩回顧</li>
                             <li rel="tabYt2" class="">2024.9.6 精彩回顧</li>
                         </ul>
                         <div class="tab_container groupYT">
@@ -112,13 +105,14 @@
             </div>
 
         </section>
-        <section class="areaSpeaker" id="topic_speaker">
+        <section class="areaSpeaker wow fadeIn" data-wow-offset="1" data-wow-duration="1s" data-wow-delay="0.3s"
+            id="topic_speaker">
             <div class="wrap">
                 <h2>
                     講師陣容
                 </h2>
                 <!-- swiper |slider-container-->
-                <div class="slider-container">
+                <div class="slider-container swiperSpeaker">
                     <div class="slider-button-prev"><img src="./assets/img/icon_arrow.svg" alt=""></div>
                     <div class="swiper product-slider">
                         <div class="swiper-wrapper">
@@ -131,7 +125,7 @@
 
                                     </figure>
                                     <figcaption>
-                                        <span class="card_name">詹文男</span>
+                                        <span class="card_name">1.詹文男</span>
                                         <span class="card_company">數位轉型學院</span>
                                         <span class="card_job">共同創辦人暨院長</span>
                                     </figcaption>
@@ -141,12 +135,12 @@
                                     onclick="openPopup(); return false;">
                                     <figure>
                                         <div class="card_pic">
-                                            <img src="./upload/66accbcd75e0b.jpg" alt="">
+                                            <img src="./upload/66a8c53cd30cd.jpg" alt="">
                                         </div>
 
                                     </figure>
                                     <figcaption>
-                                        <span class="card_name">Volker Heistermann</span>
+                                        <span class="card_name">2.Volker Heistermann</span>
                                         <span class="card_company">Mosaic Venture Lab</span>
                                         <span class="card_job">Managing Director</span>
                                     </figcaption>
@@ -156,28 +150,27 @@
                                     onclick="openPopup(); return false;">
                                     <figure>
                                         <div class="card_pic">
-                                            <img src="./upload/66accbcd75e0b.jpg" alt="">
+                                            <img src="./upload/66a8c72b38177.jpg" alt="">
                                         </div>
 
                                     </figure>
                                     <figcaption>
-                                        <span class="card_name">Volker Heistermann</span>
+                                        <span class="card_name">3.Volker Heistermann</span>
                                         <span class="card_company">Mosaic Venture Lab</span>
                                         <span class="card_job">Managing Director</span>
                                     </figcaption>
                                 </a>
                             </div>
-
                             <div class="swiper-slide item"><a class="card" href="javascript:void(0)"
                                     onclick="openPopup(); return false;">
                                     <figure>
                                         <div class="card_pic">
-                                            <img src="./upload/66accbcd75e0b.jpg" alt="">
+                                            <img src="./upload/66acbe6d7d584.jpg" alt="">
                                         </div>
 
                                     </figure>
                                     <figcaption>
-                                        <span class="card_name">嚴子登</span>
+                                        <span class="card_name">4.嚴子登</span>
                                         <span class="card_company">蔡司</span>
                                         <span class="card_job">蔡司全球電子行業負責人暨台灣工業量測品質解決方案總監</span>
                                     </figcaption>
@@ -187,12 +180,12 @@
                                     onclick="openPopup(); return false;">
                                     <figure>
                                         <div class="card_pic">
-                                            <img src="./upload/66accbcd75e0b.jpg" alt="">
+                                            <img src="./upload/66acc499adf0c.png" alt="">
                                         </div>
 
                                     </figure>
                                     <figcaption>
-                                        <span class="card_name">Volker Heistermann</span>
+                                        <span class="card_name">5.Volker Heistermann</span>
                                         <span class="card_company">Mosaic Venture Lab</span>
                                         <span class="card_job">Managing Director</span>
                                     </figcaption>
@@ -207,7 +200,7 @@
 
                                     </figure>
                                     <figcaption>
-                                        <span class="card_name">Volker Heistermann</span>
+                                        <span class="card_name">6.Volker Heistermann</span>
                                         <span class="card_company">Mosaic Venture Lab</span>
                                         <span class="card_job">Managing Director</span>
                                     </figcaption>
@@ -218,12 +211,12 @@
                                     onclick="openPopup(); return false;">
                                     <figure>
                                         <div class="card_pic">
-                                            <img src="./upload/66accbcd75e0b.jpg" alt="">
+                                            <img src="./upload/66acc4036f312.jpg" alt="">
                                         </div>
 
                                     </figure>
                                     <figcaption>
-                                        <span class="card_name">詹文男</span>
+                                        <span class="card_name">7.詹文男</span>
                                         <span class="card_company">數位轉型學院</span>
                                         <span class="card_job">共同創辦人暨院長</span>
                                     </figcaption>
@@ -238,7 +231,7 @@
 
                                     </figure>
                                     <figcaption>
-                                        <span class="card_name">Volker Heistermann</span>
+                                        <span class="card_name">8.Volker Heistermann</span>
                                         <span class="card_company">Mosaic Venture Lab</span>
                                         <span class="card_job">Managing Director</span>
                                     </figcaption>
@@ -253,7 +246,82 @@
 
                                     </figure>
                                     <figcaption>
-                                        <span class="card_name">Volker Heistermann</span>
+                                        <span class="card_name">9.詹文男</span>
+                                        <span class="card_company">數位轉型學院</span>
+                                        <span class="card_job">共同創辦人暨院長</span>
+                                    </figcaption>
+                                </a>
+                            </div>
+                            <div class="swiper-slide item"><a class="card" href="javascript:void(0)"
+                                    onclick="openPopup(); return false;">
+                                    <figure>
+                                        <div class="card_pic">
+                                            <img src="./upload/66a8c53cd30cd.jpg" alt="">
+                                        </div>
+
+                                    </figure>
+                                    <figcaption>
+                                        <span class="card_name">10.Volker Heistermann</span>
+                                        <span class="card_company">Mosaic Venture Lab</span>
+                                        <span class="card_job">Managing Director</span>
+                                    </figcaption>
+                                </a>
+                            </div>
+                            <div class="swiper-slide item"><a class="card" href="javascript:void(0)"
+                                    onclick="openPopup(); return false;">
+                                    <figure>
+                                        <div class="card_pic">
+                                            <img src="./upload/66a8c72b38177.jpg" alt="">
+                                        </div>
+
+                                    </figure>
+                                    <figcaption>
+                                        <span class="card_name">11.Volker Heistermann</span>
+                                        <span class="card_company">Mosaic Venture Lab</span>
+                                        <span class="card_job">Managing Director</span>
+                                    </figcaption>
+                                </a>
+                            </div>
+                            <div class="swiper-slide item"><a class="card" href="javascript:void(0)"
+                                    onclick="openPopup(); return false;">
+                                    <figure>
+                                        <div class="card_pic">
+                                            <img src="./upload/66acbe6d7d584.jpg" alt="">
+                                        </div>
+
+                                    </figure>
+                                    <figcaption>
+                                        <span class="card_name">12.嚴子登</span>
+                                        <span class="card_company">蔡司</span>
+                                        <span class="card_job">蔡司全球電子行業負責人暨台灣工業量測品質解決方案總監</span>
+                                    </figcaption>
+                                </a>
+                            </div>
+                            <div class="swiper-slide item"><a class="card" href="javascript:void(0)"
+                                    onclick="openPopup(); return false;">
+                                    <figure>
+                                        <div class="card_pic">
+                                            <img src="./upload/66acc499adf0c.png" alt="">
+                                        </div>
+
+                                    </figure>
+                                    <figcaption>
+                                        <span class="card_name">13.Volker Heistermann</span>
+                                        <span class="card_company">Mosaic Venture Lab</span>
+                                        <span class="card_job">Managing Director</span>
+                                    </figcaption>
+                                </a>
+                            </div>
+                            <div class="swiper-slide item"><a class="card" href="javascript:void(0)"
+                                    onclick="openPopup(); return false;">
+                                    <figure>
+                                        <div class="card_pic">
+                                            <img src="./upload/66accbcd75e0b.jpg" alt="">
+                                        </div>
+
+                                    </figure>
+                                    <figcaption>
+                                        <span class="card_name">14.Volker Heistermann</span>
                                         <span class="card_company">Mosaic Venture Lab</span>
                                         <span class="card_job">Managing Director</span>
                                     </figcaption>
@@ -264,12 +332,12 @@
                                     onclick="openPopup(); return false;">
                                     <figure>
                                         <div class="card_pic">
-                                            <img src="./upload/66accbcd75e0b.jpg" alt="">
+                                            <img src="./upload/66acc4036f312.jpg" alt="">
                                         </div>
 
                                     </figure>
                                     <figcaption>
-                                        <span class="card_name">詹文男</span>
+                                        <span class="card_name">15.詹文男</span>
                                         <span class="card_company">數位轉型學院</span>
                                         <span class="card_job">共同創辦人暨院長</span>
                                     </figcaption>
@@ -284,125 +352,262 @@
 
                                     </figure>
                                     <figcaption>
-                                        <span class="card_name">Volker Heistermann</span>
+                                        <span class="card_name">16.Volker Heistermann</span>
                                         <span class="card_company">Mosaic Venture Lab</span>
                                         <span class="card_job">Managing Director</span>
                                     </figcaption>
                                 </a>
                             </div>
-                            <div class="swiper-slide item"><a class="card" href="javascript:void(0)"
-                                    onclick="openPopup(); return false;">
-                                    <figure>
-                                        <div class="card_pic">
-                                            <img src="./upload/66accbcd75e0b.jpg" alt="">
-                                        </div>
-
-                                    </figure>
-                                    <figcaption>
-                                        <span class="card_name">Volker Heistermann</span>
-                                        <span class="card_company">Mosaic Venture Lab</span>
-                                        <span class="card_job">Managing Director</span>
-                                    </figcaption>
-                                </a>
-                            </div>
-
-                            <div class="swiper-slide item"><a class="card" href="javascript:void(0)"
-                                    onclick="openPopup(); return false;">
-                                    <figure>
-                                        <div class="card_pic">
-                                            <img src="./upload/66accbcd75e0b.jpg" alt="">
-                                        </div>
-                                    </figure>
-                                    <figcaption>
-                                        <span class="card_name">詹文男</span>
-                                        <span class="card_company">數位轉型學院</span>
-                                        <span class="card_job">共同創辦人暨院長</span>
-                                    </figcaption>
-                                </a>
-                            </div>
-                            <div class="swiper-slide item"><a class="card" href="javascript:void(0)"
-                                    onclick="openPopup(); return false;">
-                                    <figure>
-                                        <div class="card_pic">
-                                            <img src="./upload/66accbcd75e0b.jpg" alt="">
-                                        </div>
-
-                                    </figure>
-                                    <figcaption>
-                                        <span class="card_name">Volker Heistermann</span>
-                                        <span class="card_company">Mosaic Venture Lab</span>
-                                        <span class="card_job">Managing Director</span>
-                                    </figcaption>
-                                </a>
-                            </div>
-                            <div class="swiper-slide item"><a class="card" href="javascript:void(0)"
-                                    onclick="openPopup(); return false;">
-                                    <figure>
-                                        <div class="card_pic">
-                                            <img src="./upload/66accbcd75e0b.jpg" alt="">
-                                        </div>
-
-                                    </figure>
-                                    <figcaption>
-                                        <span class="card_name">Volker Heistermann</span>
-                                        <span class="card_company">Mosaic Venture Lab</span>
-                                        <span class="card_job">Managing Director</span>
-                                    </figcaption>
-                                </a>
-                            </div>
-
-                            <div class="swiper-slide item"><a class="card" href="javascript:void(0)"
-                                    onclick="openPopup(); return false;">
-                                    <figure>
-                                        <div class="card_pic">
-                                            <img src="./upload/66accbcd75e0b.jpg" alt="">
-                                        </div>
-
-                                    </figure>
-                                    <figcaption>
-                                        <span class="card_name">詹文男</span>
-                                        <span class="card_company">數位轉型學院</span>
-                                        <span class="card_job">共同創辦人暨院長</span>
-                                    </figcaption>
-                                </a>
-                            </div>
-                            <div class="swiper-slide item"><a class="card" href="javascript:void(0)"
-                                    onclick="openPopup(); return false;">
-                                    <figure>
-                                        <div class="card_pic">
-                                            <img src="./upload/66accbcd75e0b.jpg" alt="">
-                                        </div>
-
-                                    </figure>
-                                    <figcaption>
-                                        <span class="card_name">Volker Heistermann</span>
-                                        <span class="card_company">Mosaic Venture Lab</span>
-                                        <span class="card_job">Managing Director</span>
-                                    </figcaption>
-                                </a>
-                            </div>
-                            <div class="swiper-slide item"><a class="card" href="javascript:void(0)"
-                                    onclick="openPopup(); return false;">
-                                    <figure>
-                                        <div class="card_pic">
-                                            <img src="./upload/66accbcd75e0b.jpg" alt="">
-                                        </div>
-
-                                    </figure>
-                                    <figcaption>
-                                        <span class="card_name">Volker Heistermann</span>
-                                        <span class="card_company">Mosaic Venture Lab</span>
-                                        <span class="card_job">Managing Director</span>
-                                    </figcaption>
-                                </a>
-                            </div>
-
-
                         </div>
                         <!-- <div class="swiper-pagination"></div> -->
                     </div>
                     <div class="slider-button-next"><img src="./assets/img/icon_arrow.svg" alt=""></div>
+                </div>
+                <div class="slider-container openSpeaker" style="display: none;">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide item"><a class="card" href="javascript:void(0)"
+                                onclick="openPopup(); return false;">
+                                <figure>
+                                    <div class="card_pic">
+                                        <img src="./upload/66accbcd75e0b.jpg" alt="">
+                                    </div>
 
+                                </figure>
+                                <figcaption>
+                                    <span class="card_name">1.詹文男</span>
+                                    <span class="card_company">數位轉型學院</span>
+                                    <span class="card_job">共同創辦人暨院長</span>
+                                </figcaption>
+                            </a>
+                        </div>
+                        <div class="swiper-slide item"><a class="card" href="javascript:void(0)"
+                                onclick="openPopup(); return false;">
+                                <figure>
+                                    <div class="card_pic">
+                                        <img src="./upload/66a8c53cd30cd.jpg" alt="">
+                                    </div>
+
+                                </figure>
+                                <figcaption>
+                                    <span class="card_name">2.Volker Heistermann</span>
+                                    <span class="card_company">Mosaic Venture Lab</span>
+                                    <span class="card_job">Managing Director</span>
+                                </figcaption>
+                            </a>
+                        </div>
+                        <div class="swiper-slide item"><a class="card" href="javascript:void(0)"
+                                onclick="openPopup(); return false;">
+                                <figure>
+                                    <div class="card_pic">
+                                        <img src="./upload/66a8c72b38177.jpg" alt="">
+                                    </div>
+
+                                </figure>
+                                <figcaption>
+                                    <span class="card_name">3.Volker Heistermann</span>
+                                    <span class="card_company">Mosaic Venture Lab</span>
+                                    <span class="card_job">Managing Director</span>
+                                </figcaption>
+                            </a>
+                        </div>
+                        <div class="swiper-slide item"><a class="card" href="javascript:void(0)"
+                                onclick="openPopup(); return false;">
+                                <figure>
+                                    <div class="card_pic">
+                                        <img src="./upload/66acbe6d7d584.jpg" alt="">
+                                    </div>
+
+                                </figure>
+                                <figcaption>
+                                    <span class="card_name">4.嚴子登</span>
+                                    <span class="card_company">蔡司</span>
+                                    <span class="card_job">蔡司全球電子行業負責人暨台灣工業量測品質解決方案總監</span>
+                                </figcaption>
+                            </a>
+                        </div>
+                        <div class="swiper-slide item"><a class="card" href="javascript:void(0)"
+                                onclick="openPopup(); return false;">
+                                <figure>
+                                    <div class="card_pic">
+                                        <img src="./upload/66acc499adf0c.png" alt="">
+                                    </div>
+
+                                </figure>
+                                <figcaption>
+                                    <span class="card_name">5.Volker Heistermann</span>
+                                    <span class="card_company">Mosaic Venture Lab</span>
+                                    <span class="card_job">Managing Director</span>
+                                </figcaption>
+                            </a>
+                        </div>
+                        <div class="swiper-slide item"><a class="card" href="javascript:void(0)"
+                                onclick="openPopup(); return false;">
+                                <figure>
+                                    <div class="card_pic">
+                                        <img src="./upload/66accbcd75e0b.jpg" alt="">
+                                    </div>
+
+                                </figure>
+                                <figcaption>
+                                    <span class="card_name">6.Volker Heistermann</span>
+                                    <span class="card_company">Mosaic Venture Lab</span>
+                                    <span class="card_job">Managing Director</span>
+                                </figcaption>
+                            </a>
+                        </div>
+
+                        <div class="swiper-slide item"><a class="card" href="javascript:void(0)"
+                                onclick="openPopup(); return false;">
+                                <figure>
+                                    <div class="card_pic">
+                                        <img src="./upload/66acc4036f312.jpg" alt="">
+                                    </div>
+
+                                </figure>
+                                <figcaption>
+                                    <span class="card_name">7.詹文男</span>
+                                    <span class="card_company">數位轉型學院</span>
+                                    <span class="card_job">共同創辦人暨院長</span>
+                                </figcaption>
+                            </a>
+                        </div>
+                        <div class="swiper-slide item"><a class="card" href="javascript:void(0)"
+                                onclick="openPopup(); return false;">
+                                <figure>
+                                    <div class="card_pic">
+                                        <img src="./upload/66accbcd75e0b.jpg" alt="">
+                                    </div>
+
+                                </figure>
+                                <figcaption>
+                                    <span class="card_name">8.Volker Heistermann</span>
+                                    <span class="card_company">Mosaic Venture Lab</span>
+                                    <span class="card_job">Managing Director</span>
+                                </figcaption>
+                            </a>
+                        </div>
+                        <div class="swiper-slide item"><a class="card" href="javascript:void(0)"
+                                onclick="openPopup(); return false;">
+                                <figure>
+                                    <div class="card_pic">
+                                        <img src="./upload/66accbcd75e0b.jpg" alt="">
+                                    </div>
+
+                                </figure>
+                                <figcaption>
+                                    <span class="card_name">9.詹文男</span>
+                                    <span class="card_company">數位轉型學院</span>
+                                    <span class="card_job">共同創辦人暨院長</span>
+                                </figcaption>
+                            </a>
+                        </div>
+                        <div class="swiper-slide item"><a class="card" href="javascript:void(0)"
+                                onclick="openPopup(); return false;">
+                                <figure>
+                                    <div class="card_pic">
+                                        <img src="./upload/66a8c53cd30cd.jpg" alt="">
+                                    </div>
+
+                                </figure>
+                                <figcaption>
+                                    <span class="card_name">10.Volker Heistermann</span>
+                                    <span class="card_company">Mosaic Venture Lab</span>
+                                    <span class="card_job">Managing Director</span>
+                                </figcaption>
+                            </a>
+                        </div>
+                        <div class="swiper-slide item"><a class="card" href="javascript:void(0)"
+                                onclick="openPopup(); return false;">
+                                <figure>
+                                    <div class="card_pic">
+                                        <img src="./upload/66a8c72b38177.jpg" alt="">
+                                    </div>
+
+                                </figure>
+                                <figcaption>
+                                    <span class="card_name">11.Volker Heistermann</span>
+                                    <span class="card_company">Mosaic Venture Lab</span>
+                                    <span class="card_job">Managing Director</span>
+                                </figcaption>
+                            </a>
+                        </div>
+                        <div class="swiper-slide item"><a class="card" href="javascript:void(0)"
+                                onclick="openPopup(); return false;">
+                                <figure>
+                                    <div class="card_pic">
+                                        <img src="./upload/66acbe6d7d584.jpg" alt="">
+                                    </div>
+
+                                </figure>
+                                <figcaption>
+                                    <span class="card_name">12.嚴子登</span>
+                                    <span class="card_company">蔡司</span>
+                                    <span class="card_job">蔡司全球電子行業負責人暨台灣工業量測品質解決方案總監</span>
+                                </figcaption>
+                            </a>
+                        </div>
+                        <div class="swiper-slide item"><a class="card" href="javascript:void(0)"
+                                onclick="openPopup(); return false;">
+                                <figure>
+                                    <div class="card_pic">
+                                        <img src="./upload/66acc499adf0c.png" alt="">
+                                    </div>
+
+                                </figure>
+                                <figcaption>
+                                    <span class="card_name">13.Volker Heistermann</span>
+                                    <span class="card_company">Mosaic Venture Lab</span>
+                                    <span class="card_job">Managing Director</span>
+                                </figcaption>
+                            </a>
+                        </div>
+                        <div class="swiper-slide item"><a class="card" href="javascript:void(0)"
+                                onclick="openPopup(); return false;">
+                                <figure>
+                                    <div class="card_pic">
+                                        <img src="./upload/66accbcd75e0b.jpg" alt="">
+                                    </div>
+
+                                </figure>
+                                <figcaption>
+                                    <span class="card_name">14.Volker Heistermann</span>
+                                    <span class="card_company">Mosaic Venture Lab</span>
+                                    <span class="card_job">Managing Director</span>
+                                </figcaption>
+                            </a>
+                        </div>
+
+                        <div class="swiper-slide item"><a class="card" href="javascript:void(0)"
+                                onclick="openPopup(); return false;">
+                                <figure>
+                                    <div class="card_pic">
+                                        <img src="./upload/66acc4036f312.jpg" alt="">
+                                    </div>
+
+                                </figure>
+                                <figcaption>
+                                    <span class="card_name">15.詹文男</span>
+                                    <span class="card_company">數位轉型學院</span>
+                                    <span class="card_job">共同創辦人暨院長</span>
+                                </figcaption>
+                            </a>
+                        </div>
+                        <div class="swiper-slide item"><a class="card" href="javascript:void(0)"
+                                onclick="openPopup(); return false;">
+                                <figure>
+                                    <div class="card_pic">
+                                        <img src="./upload/66accbcd75e0b.jpg" alt="">
+                                    </div>
+
+                                </figure>
+                                <figcaption>
+                                    <span class="card_name">16.Volker Heistermann</span>
+                                    <span class="card_company">Mosaic Venture Lab</span>
+                                    <span class="card_job">Managing Director</span>
+                                </figcaption>
+                            </a>
+                        </div>
+                    </div>
                 </div>
                 <a href="javascript:void(0)" onclick="hideSlider(); return false;"
                     class="btn_start hideSlider"><b>EXPAND</b>
@@ -412,7 +617,8 @@
                             alt=""></span></a>
             </div>
         </section>
-        <section class="areaAganda" id="topic_aganda">
+        <section class="areaAganda wow fadeIn" data-wow-offset="1" data-wow-duration="1s" data-wow-delay="0.3s"
+            id="topic_aganda">
             <div class="bg_top">
                 <div class="bg_bt">
                     <div class="wrap">
@@ -875,7 +1081,8 @@
 
 
         </section>
-        <section class="areaReport" id="topic_report">
+        <section class="areaReport wow fadeIn" data-wow-offset="1" data-wow-duration="1s" data-wow-delay="0.3s"
+            id="topic_report">
             <div class="wrap">
                 <h2>專題報導
                 </h2>
@@ -985,7 +1192,7 @@
                 </ul>
             </div>
         </section>
-        <section class="areaPartner">
+        <section class="areaPartner wow fadeIn" data-wow-offset="1" data-wow-duration="1s" data-wow-delay="0.3s">
             <div class="wrap">
                 <div class="logoBox">
                     <h3>主辦單位</h3>
@@ -1063,7 +1270,7 @@
             </div>
         </div>
     </div>
-    <footer>
+    <footer class=" wow fadeIn" data-wow-offset="1" data-wow-duration="1s" data-wow-delay="0.3s">
         <div class="wrap">
             <div class="logo"><img src="./upload/logo.png" alt=""></div>
             <div class="foot_md"><span>電話：0800-506-088</span>
@@ -1078,12 +1285,6 @@
     <script src="./assets/js/main.js"></script>
     <script src="./assets/js/swiper-bundle.min.js"></script>
     <script>
-        $(function () {
-            $('base').attr('href', apiUrl);
-        });
-
-        // $("header").load("./layout/header.html");
-        // $("footer").load("./layout/footer.html");
 
         new WOW().init();
 
@@ -1091,7 +1292,40 @@
         var swiper;
         document.addEventListener("DOMContentLoaded", function () {
             // 初始化 Swiper
-            swiper = new Swiper(".product-slider", {
+            initSwiper('.product-slider');
+        });
+
+        // click - hide swiper
+        function hideSlider() {
+            $('.swiperSpeaker').hide();
+            $('.openSpeaker').show();
+
+            // 顯示/隱藏切換
+            $('.hideSlider').hide();
+            $('.showSlider').show();
+        }
+
+        //click - show Slider
+        function showSlider() {
+
+            $('.swiperSpeaker').fadeIn(300);
+            $('.openSpeaker').hide();
+
+            // 平滑滾動到 #topic_speaker
+            var targetOffset = $("#topic_speaker").offset()?.top - 80 || 0; // 確保 offset() 存在
+            $("html, body").animate({
+                scrollTop: targetOffset
+            }, 500);
+
+            // 顯示/隱藏切換
+            $('.hideSlider').show();
+            $('.showSlider').hide();
+        }
+
+
+        //swiper init
+        function initSwiper(selector) {
+            const swiper = new Swiper(selector, {
                 slidesPerView: 1.5,
                 spaceBetween: 0,
                 loop: false,
@@ -1111,96 +1345,37 @@
                     },
                     768: {
                         slidesPerView: 3.5,
-                        spaceBetween: 20,
+                        spaceBetween: 0,
                     },
                     992: {
                         slidesPerView: 3,
-                        spaceBetween: 25,
+                        spaceBetween: 0,
                     },
                     1200: {
                         slidesPerView: 4,
-                        spaceBetween: 25,
-                    },
-                },
-            });
-        });
-
-        // hideSlider 函數，摧毀 Swiper 實例
-        function hideSlider() {
-            if (swiper) {
-                swiper.destroy(true, true); // 摧毀 Swiper 實例並清除所有事件
-                swiper = null; // 清空 swiper 變數
-            }
-
-            // 為 swiper-wrapper 加上 .openSpeaker 類別來更改樣式
-            var swiperList = document.querySelector('.slider-container');
-            if (swiperList) {
-                swiperList.classList.add('openSpeaker');
-            }
-            $('.hideSlider').hide();
-            $('.showSlider').show();
-        }
-        function showSlider() {
-            var swiperList = document.querySelector('.slider-container');
-            if (swiperList) {
-                swiperList.classList.remove('openSpeaker'); // 移除隱藏樣式
-            }
-
-            // 如果 swiper 已存在，先銷毀它，避免多次初始化
-            if (swiper) {
-                swiper.destroy(true, true);
-            }
-
-            // 重新初始化 Swiper
-            swiper = new Swiper(".product-slider", {
-                slidesPerView: 1.5,
-                spaceBetween: 10,
-                loop: false,
-                freeMode: true, // 自由滑動模式
-                navigation: {
-                    nextEl: ".slider-button-next",
-                    prevEl: ".slider-button-prev",
-                },
-                pagination: {
-                    el: ".swiper-pagination",
-                    clickable: true,
-                },
-                breakpoints: {
-                    575: {
-                        slidesPerView: 3,
-                        spaceBetween: 25,
-                    },
-                    768: {
-                        slidesPerView: 3.5,
-                        spaceBetween: 25,
-                    },
-                    1024: {
-                        slidesPerView: 3,
-                        spaceBetween: 25,
-                    },
-                    1200: {
-                        slidesPerView: 4,
-                        spaceBetween: 15,
+                        spaceBetween: 0,
                     },
                 },
             });
 
-            // 平滑滾動到 #topic_speaker
-            var targetOffset = $("#topic_speaker").offset()?.top - 80 || 0; // 確保 offset() 存在
-            $("html, body").animate({
-                scrollTop: targetOffset
-            }, 500);
+            // 改動按鈕的點擊事件，讓它移動 slidesPerView 的數量
+            const nextButton = document.querySelector('.slider-button-next');
+            const prevButton = document.querySelector('.slider-button-prev');
 
-            // 顯示/隱藏按鈕
-            $(".hideSlider").show();
-            $(".showSlider").hide();
+            nextButton.addEventListener('click', () => {
+                swiper.slideTo(swiper.activeIndex + swiper.params.slidesPerView); // 下一頁滑動 slidesPerView 的數量
+            });
+
+            prevButton.addEventListener('click', () => {
+                swiper.slideTo(swiper.activeIndex - swiper.params.slidesPerView); // 上一頁滑動 slidesPerView 的數量
+            });
         }
 
-        //popup
+        //popup open
         function openPopup() {
             document.getElementById('popup').style.display = 'flex';
         }
-
+        //popup close
         function closePopup() {
             document.getElementById('popup').style.display = 'none';
         }
@@ -1214,40 +1389,18 @@
             }
         });
 
-
-        $(document).ready(function () {
-            const hash = window.location.hash.substring(1);
-            const targetElement = $(`#${hash}`);
-            // console.log(targetElement);
-            const scrollToTarget = (element) => {
-                const targetPosition = element.offset().top - 80;
-                $('html, body').animate({
-                    scrollTop: targetPosition
-                }, 1000);
-            };
-            if (hash == 'topic_about') {
-                scrollToTarget(targetElement);
-                $('#page_about').addClass('active');
-            } else if (hash == 'topic_qa') {
-                scrollToTarget(targetElement);
-                $('#page_qa').addClass('active');
-            }
-        });
-
-
         //tab切換
-        // 通用的 Tab 切換函式
         function setupTabs(tabGroup) {
             // 隱藏所有 tab 內容，顯示第一個 tab 內容
             $("." + tabGroup + " .tab_content").hide();
-            $("." + tabGroup + " .tab_content:first").fadeIn(800);
+            $("." + tabGroup + " .tab_content:first").fadeIn(500);
 
 
             // 點擊 tab 進行切換
             $("." + tabGroup + " >li").click(function () {
-                $("." + tabGroup + " .tab_content").hide(0);
+                $("." + tabGroup + " .tab_content").hide();
                 var activeTab = $(this).attr("rel");
-                $("#" + activeTab).fadeIn(800);
+                $("#" + activeTab).fadeIn(500);
                 $("." + tabGroup + " >li").removeClass("active");
                 $(this).addClass("active");
                 $("." + tabGroup + " .tab_drawer_heading").removeClass("d_active");

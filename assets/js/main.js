@@ -42,7 +42,7 @@ $(document).on('click', '.navLinkIndex', function (event) {
     const targetElement = $("#" + listID);
 
     const scrollToTarget = (element) => {
-        const targetPosition = element.offset().top - 20;
+        const targetPosition = element.offset().top - 50;
         $('html, body').animate({
             scrollTop: targetPosition
         }, 500);
@@ -55,77 +55,3 @@ $(document).on('click', '.navLinkIndex', function (event) {
         window.location.href = `/#${listID}`;
     }
 });
-
-//加 active
-// const navList_a = '#sidr a';
-// $(document).on('click', navList_a, function () {
-//     // event.preventDefault();
-
-//     // 檢查是否有其他元素擁有 .active 類別
-//     if ($(navList_a).hasClass('active')) {
-//         // 如果有，移除 .active 類別
-//         $(navList_a).removeClass('active');
-//     }
-
-//     // 無論如何，為當前點擊的元素添加 .active 類別
-//     $(this).addClass('active');
-//     if ($(this).hasClass('buyPoint')) {
-//     }
-// });
-
-
-//BN effect
-// let lastScrollTop = 0;
-// function handleAreaMainBNEffect() {
-//     const scrollTop = $(window).scrollTop();
-//     const $areaMainBN = $('.areaMainBN .wrap');
-//     // console.log(scrollTop);
-    
-//     if (scrollTop > lastScrollTop && scrollTop > 50) {
-//         $areaMainBN.addClass('mainBnEffect');
-//     } else if (scrollTop < lastScrollTop && scrollTop < 550) {
-//         $areaMainBN.removeClass('mainBnEffect');
-//     }
-//     if(scrollTop > 1250){
-//         $areaMainBN.hide();
-//     }else{
-
-//         $areaMainBN.show();
-//     }
-
-//     lastScrollTop = scrollTop;
-// }
-
-//平滑
-if (typeof Lenis === 'undefined') {
-    console.error('Lenis library not loaded.');
-} else {
-    console.log('Lenis is loaded successfully.');
-}
-document.addEventListener('DOMContentLoaded', function () {
-    // 初始化 Lenis
-    const lenis = new Lenis({
-        lerp: 0.1,         
-        smoothWheel: true, // 滾輪平滑
-        smoothTouch: false  //觸控屏平滑
-    });
-
-    // 更新 Lenis
-    function animate(time) {
-        lenis.raf(time); 
-        requestAnimationFrame(animate);
-    }
-
-    requestAnimationFrame(animate);
-});
-
-// //換語言
-// $(document).on('click', '#langListItem li', function (){
-//     const selectLang = $(this).data('lang');
-//     console.log(selectLang);
-//     // langDefault = selectLang;
-//     // deleteCookie('userLang');
-//     // setCookie(langDefault);
-//     window.location.reload();
-
-// })

@@ -8,6 +8,7 @@
     }
 
     @include breakpoint('md', 'max') {
+        width: 94%;
         margin: 6% auto;
 
     }
@@ -33,6 +34,12 @@ header {
 
     }
 
+    // a {
+    //     // cursor: pointer !important;
+    //     border: 1px solid red;
+    //     display: block;
+    // }
+
 
     @include breakpoint('lg', 'max') {
         .wrap {
@@ -42,7 +49,7 @@ header {
 
     @include breakpoint('md', 'max') {
         .wrap {
-            padding: .5em 1em;
+            padding: 1em;
         }
     }
 
@@ -56,6 +63,7 @@ header {
 
         a:hover {
             filter: brightness(1.2);
+            // cursor: pointer !important;
         }
 
         @include breakpoint('md', 'max') {
@@ -74,12 +82,11 @@ header {
 
         img {
             width: 100%;
+            display: block;
         }
     }
 
     #sidr {
-
-
         a {
             color: $white;
             display: block;
@@ -178,7 +185,7 @@ header {
 
         @include breakpoint('md', 'max') {
             width: 100%;
-            padding-right: 10px;
+            // padding-right: 10px;
 
             .logo {
                 width: 80px;
@@ -323,7 +330,7 @@ section {
         box-sizing: border-box;
 
         @include breakpoint('xl', 'max') {
-            padding: 5% 2%;
+            padding: 5% 0;
         }
 
         @include breakpoint('sm', 'max') {
@@ -353,14 +360,13 @@ section {
                 display: flex;
                 margin: 0;
                 padding: 0;
-
                 list-style: none;
                 width: 100%;
 
                 li {
                     float: left;
                     margin: 0;
-                    cursor: pointer;
+                    cursor: pointer !important;
                     padding: 10px 0px;
                     font-size: 16px;
                     font-weight: 400;
@@ -368,6 +374,20 @@ section {
                     overflow: hidden;
                     position: relative;
                     margin-right: .5em;
+                }
+
+                @include breakpoint('xs', 'max') {
+                    justify-content: center;
+
+                    li {
+                        // width: 50%;
+                        flex-grow: 1;
+                        text-align: center;
+
+                        &:last-child {
+                            margin-right: 0;
+                        }
+                    }
                 }
             }
 
@@ -420,7 +440,8 @@ section {
                 width: 100%;
                 // background: #fff;
                 background-color: #121212;
-                overflow: auto;
+                overflow: hidden;
+                // border: 2px solid red;
             }
 
             .tab_content {
@@ -600,24 +621,13 @@ section {
         align-items: center;
         justify-content: center;
         position: relative;
+        margin-top: 20px;
 
         .swiper-wrapper {
-            margin-top: 4%;
             height: fit-content;
 
-            // @include breakpoint('md', 'max') {
-            //     height: 37vw;
-            // }
-
-            @include breakpoint('sm', 'max') {
-                margin-top: 10vw;
-            }
-
-            // @include breakpoint('xs', 'max') {
-            //     height: 71vw;
-            // }
-
             .item {
+                width: auto;
 
                 a.card {
                     display: block;
@@ -702,7 +712,7 @@ section {
         .slider-button-prev[aria-disabled="true"],
         .slider-button-next[aria-disabled="true"] {
             opacity: 0.5;
-            pointer-events: none;
+            // pointer-events: none;
             /* 禁用點擊 */
             filter: grayscale(100%);
             /* 變成灰色 */
@@ -730,105 +740,106 @@ section {
             }
         }
 
-        &.openSpeaker {
-            .product-slider {
-                height: auto;
-                overflow: inherit;
-                display: flex;
-                flex-wrap: wrap;
-                width: 90%;
-                height: auto;
-                overflow: inherit;
-                // border: 1px solid red;
 
-                animation: moveDown .7s ease-out forwards;
+    }
+
+    .openSpeaker {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        margin-top: 40px;
+        animation: moveDown .7s ease-out forwards;
+
+        // .product-slider {
+        //     height: auto;
+        //     overflow: inherit;
+        //     display: flex;
+        //     flex-wrap: wrap;
+        //     width: 90%;
+        //     height: auto;
+        //     overflow: inherit;
+
+
+        //     @include breakpoint('md', 'max') {
+        //         width: 80%;
+        //     }
+
+        //     @include breakpoint('sm', 'max') {
+        //         width: 100%;
+        //     }
+
+
+        // }
+
+        .swiper-wrapper {
+            overflow: inherit;
+            flex-wrap: wrap;
+
+            .item {
+                width: 20% !important;
+                padding: 0 10px;
+                box-sizing: border-box;
+
+                a.card {
+                    display: block;
+                    padding: 0 10px;
+                    margin-bottom: 2rem;
+                }
+
+                @include breakpoint('lg', 'max') {
+                    width: 25% !important;
+
+                }
 
                 @include breakpoint('md', 'max') {
-                    width: 80%;
+                    width: 33.33333% !important;
                 }
-
-                // @include breakpoint('sm', 'max') {
-                //     width: 90%;
-                // }
 
                 @include breakpoint('sm', 'max') {
-                    width: 100%;
-                }
+                    width: 100% !important;
+                    padding: 0;
 
-                .swiper-wrapper {
-                    // height: auto;
-                    overflow: inherit;
-                    flex-wrap: wrap;
+                    a.card {
+                        max-width: 100%;
+                        display: flex;
+                        align-items: center;
 
-                    .item {
-                        width: 20%;
-                        padding: 0 10px;
-                        box-sizing: border-box;
-
-                        a.card {
-                            // width: 100%;
-                            display: block;
-                            padding: 0 10px;
-                            margin-bottom: 2rem;
-                        }
-
-                        @include breakpoint('lg', 'max') {
-                            width: 25%;
-
-                        }
-
-                        @include breakpoint('md', 'max') {
-                            width: 33.33333%;
-                        }
-
-                        // @include breakpoint('sm', 'max') {
-                        //     width: 50%;
-                        // }
-
-                        @include breakpoint('sm', 'max') {
-                            width: 100%;
+                        figure {
+                            width: 30%;
                             padding: 0;
 
-                            a.card {
-                                max-width: 100%;
-                                display: flex;
-                                align-items: center;
+                            .card_pic {
+                                width: 100%;
+                            }
+                        }
 
-                                figure {
-                                    width: 30%;
-                                    padding: 0;
+                        figcaption {
+                            width: 70%;
+                            border: 1px solid transparent;
 
-                                    .card_pic {
-                                        width: 100%;
-                                    }
-                                }
+                            span {
+                                text-align: left;
+                                margin-left: 1rem;
 
-                                figcaption {
-                                    width: 70%;
-                                    border: 1px solid transparent;
-
-                                    span {
-                                        text-align: left;
-                                        margin-left: 1rem;
-
-                                        &.card_name {
-                                            margin: 0 0 0 1rem;
-                                        }
-                                    }
+                                &.card_name {
+                                    margin: 0 0 0 1rem;
                                 }
                             }
                         }
                     }
-
                 }
             }
 
+        }
 
+        .slider-button-prev,
+        .slider-button-next {
+            display: none;
+        }
 
-            .slider-button-prev,
-            .slider-button-next {
-                display: none;
-            }
+        @include breakpoint('md', 'max') {
+            margin-top: 20px;
         }
     }
 
@@ -883,7 +894,7 @@ section {
     }
 
     .bg_bt {
-        padding: 4% 0;
+        padding: 2% 0;
         // padding-bottom: 6%;
         background: url(../img/bg_bt.png) no-repeat center bottom;
         background-size: 100% auto;
@@ -907,7 +918,7 @@ section {
         // }
 
         @include breakpoint('md', 'max') {
-            width: 96%;
+            width: 94%;
         }
 
         h2 {
@@ -923,18 +934,10 @@ section {
             color: $greyLine;
         }
 
-        // .stickyEffect {
-        //     // position: sticky;
-        //     // top: 10%;
-        //     // overflow: hidden;
-        //     border: 1px solid red;
-        // }
-
         // TAB
         ul.tabs {
             position: sticky;
             top: 78px;
-            // top: 200px;
             z-index: 99999;
             display: flex;
 
@@ -944,6 +947,7 @@ section {
             padding: 0;
             list-style: none;
             background: $goldLighten;
+            // border: 1px solid $goldLighten;
 
             // border: 1px solid red;
             @include breakpoint('md', 'max') {
@@ -960,7 +964,7 @@ section {
                 position: relative;
                 // margin-right: 20px;
                 box-sizing: border-box;
-                cursor: pointer;
+                cursor: pointer !important;
 
                 @include breakpoint('md', 'max') {
                     height: 5.2em;
@@ -972,10 +976,7 @@ section {
                     align-items: center;
                     border: 3px solid transparent;
                     // height: 6.5em;
-
                 }
-
-
 
                 h3 {
                     font-size: 54px;
@@ -1046,8 +1047,12 @@ section {
                             padding-right: 40px;
 
                             @include breakpoint('md', 'max') {
-                                padding-right: 20px;
+                                padding-right: 30px;
 
+                            }
+
+                            @include breakpoint('xs', 'max') {
+                                padding-right: 11vw;
                             }
 
                         }
@@ -1086,7 +1091,11 @@ section {
                             padding-left: 40px;
 
                             @include breakpoint('md', 'max') {
-                                padding-left: 20px;
+                                padding-left: 30px;
+                            }
+
+                            @include breakpoint('xs', 'max') {
+                                padding-left: 11vw;
                             }
                         }
                     }
@@ -1105,7 +1114,6 @@ section {
                     z-index: 5;
                     width: 55%;
                     display: block;
-                    cursor: default;
 
                     @include breakpoint('md', 'max') {
                         width: 60%;
@@ -1448,8 +1456,21 @@ section {
     ul.reportList {
         display: flex;
         flex-wrap: wrap;
-        width: 100%;
+        width: calc(100% + 40px);
         margin-top: 60px;
+        margin-left: -20px;
+        margin-right: -20px;
+
+        @include breakpoint('xl', 'max') {
+            width: calc(96% + 30px);
+            margin-left: auto;
+            margin-right: auto;
+
+        }
+        @include breakpoint('md', 'max') {
+            width: calc(94% + 20px);
+
+        }
 
         @include breakpoint('sm', 'max') {
             margin-top: 40px;
@@ -1494,7 +1515,7 @@ section {
 
                 p {
                     // color: $gray-700;
-                    font-size: 14px;
+                    font-size: 15px;
                     @include text-ellipsis (100%, 3);
                     font-weight: 300;
                     margin-bottom: .7rem;
@@ -1509,8 +1530,13 @@ section {
                     @include tran(0.2s, ease-out);
 
                     img {
-                        height: .7em;
+                        height: .6em;
+                        margin-left: 5px;
                     }
+                    @include breakpoint('md', 'max') {
+                        opacity: 1;
+                    }
+                   
                 }
 
                 .card-body {
@@ -1523,7 +1549,7 @@ section {
                     width: 100%;
                     height: 12rem;
                     overflow: hidden;
-                    border-bottom: 2px solid $goldLighten;
+                    border-bottom: 3px solid $goldLighten;
 
 
 
@@ -1535,7 +1561,6 @@ section {
 
                     @include tran(0.2s, ease-out);
 
-
                 }
 
                 a {
@@ -1546,32 +1571,34 @@ section {
 
                     // border: 1px solid red;
                     @include breakpoint('md', 'max') {
-                        height: 24rem;
+                        height: 25rem;
                     }
 
                     @include breakpoint('sm', 'max') {
-                        height: 355px;
+                        height: 390px;
                     }
 
                     @include breakpoint('xs', 'max') {
-                        height: 332px;
+                        height: 360px;
                     }
-
-                    &:hover {
-                        .card_img {
-                            height: 9.5rem;
-                            // transition: opacity 0.3s ease;
-                            filter: brightness(.8);
-
+                    @include breakpoint('lg', 'min') {
+                        &:hover {
+                            .card_img {
+                                height: 9.5rem;
+                                // transition: opacity 0.3s ease;
+                                filter: brightness(.8);
+    
+                            }
+    
+                            .more {
+                                transform: translateY(100%);
+                                opacity: 1;
+    
+                            }
+    
                         }
-
-                        .more {
-                            transform: translateY(100%);
-                            opacity: 1;
-
-                        }
-
                     }
+                    
 
 
                 }
@@ -1640,25 +1667,22 @@ section {
         }
     }
 
-    // @include breakpoint('xs', 'max') {
-    //     .stickyEffect {
-    //         margin-top: 160px;
-    //     }
-
-    // }
-
-    // @include breakpoint('xxs', 'max') {
-    //     .stickyEffect {
-    //         margin-top: 38vw;
-    //     }
-
-    // }
 }
 
 .areaPartner {
     background-color: $bg_grey;
 
     border: 1px solid $bg_grey;
+    .warp{
+        @include breakpoint('xl', 'max') {
+            width: 96%;
+            // margin: 0;
+        }
+        @include breakpoint('md', 'max') {
+            width: 94%;
+            // margin: 0;
+        }
+    }
 
     .logoBox {
         display: flex;
@@ -1721,6 +1745,10 @@ section {
                     &>img {
                         height: 100%;
                         margin: 0 1.5rem;
+
+                        @include breakpoint('md', 'max') {
+                            margin: 0 .8rem;
+                        }
                     }
                 }
 
@@ -1801,17 +1829,13 @@ section {
     white-space: nowrap;
     /* 防止文字換行 */
     box-sizing: border-box;
-    /* 保持寬度的計算方式 */
-    // background-color: #f0f0f0; /* 可選：設置背景顏色 */
-    // font-size: 24px;// font-weight: bold;
-    // color: $primary;
-    // color: transparent;
 }
 
 /* 文字跑馬燈效果的樣式 */
 .marquee {
     position: relative;
     display: flex;
+    margin-top: 1em;
     padding: 5px;
     // border: 1px solid red;
 
@@ -1841,7 +1865,7 @@ section {
     &>ul {
         // display: inline-block;
         // padding-left: 0;       /* 起始位置為容器外部 */
-        animation: marquee 40s linear infinite;
+        animation: marquee 33s linear infinite;
         text-transform: uppercase;
         background-color: transparent;
 
@@ -2036,12 +2060,25 @@ footer {
     width: 100%;
     background-color: #282F3E;
     padding: 34px 0;
+    box-sizing: border-box;
 
     i {
         width: 100%;
         text-align: center;
         display: block;
         padding-bottom: 34px;
+    }
+
+    @include breakpoint('xl', 'max') {
+        padding: 34px 2%;
+    }
+
+    @include breakpoint('md', 'max') {
+        padding: 30px 10px;
+
+        i {
+            padding-bottom: 32px;
+        }
     }
 
     .wrap {
@@ -2117,17 +2154,17 @@ footer {
                     color: $white;
                 }
 
-                // &:first-child {
-                //     a {
-                //         line-height: 1;
-                //     }
-                // }
+                &.logo {
+                    width: 100px;
+                    margin-bottom: 1rem;
+                }
 
-                // &:not(.copyright) {
-
-                //     color: $white;
-                //     margin-bottom: 12px;
-                // }
+                &.foot_md {
+                    font-size: 14px;
+                    font-weight: 700;
+                    line-height: 1.5;
+                    margin-bottom: 1.5em;
+                }
 
                 &.copyright {
                     order: 3;
@@ -2135,17 +2172,12 @@ footer {
                     margin-top: 23px;
                     padding: 11px 0;
                     font-size: 12px;
+                    // margin-bottom: 2em;
                 }
             }
         }
     }
 
-    @include breakpoint('md', 'max') {
-        padding: 30px 0 0 0;
 
-        i {
-            padding-bottom: 32px;
-        }
-    }
 
 }
