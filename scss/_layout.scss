@@ -94,7 +94,7 @@ header {
             // padding-top: .3em;
             padding: .5em 1em;
             font-size: 18px;
-            font-weight: 400;
+            font-weight: 600;
             text-decoration: none;
             box-sizing: border-box;
             @include tran(0.5s, ease);
@@ -110,7 +110,7 @@ header {
                 color: $blue;
                 margin-right: .5em;
                 margin-left: .5em;
-                padding: .5em 2em;
+                padding: .5em 2.5em;
                 background-color: $golden;
                 border-radius: $b-60;
                 white-space: nowrap;
@@ -120,7 +120,7 @@ header {
                     // top: -20%;
                     // left: -30%;
                     content: "";
-                    width: 200%;
+                    width: 250%;
                     height: 50%;
                     background-color: rgba($white, 0.4);
                     transform: rotate(-30deg);
@@ -286,10 +286,10 @@ section {
     height: 100%;
     padding: 2% 0;
     // border: 1px solid red;
-    // background: url(../img/yt_bg.jpg) no-repeat center 0;
-    // background-size: cover;
+    background: url(../img/about_bg.jpg) no-repeat center 0;
+    background-size: cover;
     font-size: 100%;
-    background: $ll_blue;
+    // background: $ll_blue;
     // overflow: hidden;
 
     .wrap {
@@ -370,7 +370,8 @@ section {
                     padding: 10px 0px;
                     font-size: 16px;
                     font-weight: 400;
-                    color: $white;
+                    color: $blueDarken;
+                    font-weight: bold;
                     overflow: hidden;
                     position: relative;
                     margin-right: .5em;
@@ -394,24 +395,22 @@ section {
             ul.tabs li {
                 padding: .5em 1.5em;
                 font-size: 22px;
-                background-color: rgba($blue, 0.25);
-                border: 1px solid #1952bc;
+                background-color: rgba(#E4EFF4, 0.8);
                 border-bottom: 0;
                 border-radius: $b-8 $b-8 0 0;
                 opacity: .8;
+                @include tran(0.4s, ease);
 
                 &:hover {
-                    color: $bg_grey;
+                    color: $blue;
                     opacity: 1;
                 }
 
                 &.active {
-                    // color: $dark;
-                    border: 1px solid $dark;
+                    color: $blueBg;
                     background-color: $dark;
                     display: block;
                     //   padding-left: 30px;
-                    font-weight: bold;
                     opacity: 1;
                 }
 
@@ -463,18 +462,19 @@ section {
         }
 
         .textSide {
-            background-color: rgba($color: $dark, $alpha: .15);
+            background-color: rgba($color: $blue, $alpha: .26);
             width: auto;
             max-width: 28em;
             height: 26.5em;
-            margin-top: 3.7em;
+            margin-top: 3.55em;
             padding: 1em .5em 1em 2em;
             font-size: 16px;
+            font-weight: 400;
             padding: 1em;
             padding-left: 3.5em;
             padding-right: .5em;
             font-size: 16px;
-            color: $white;
+            color: $bg_grey;
             display: inline-block;
             border-radius: 0 $b-8 $b-8 0;
             box-sizing: border-box;
@@ -511,6 +511,17 @@ section {
                     display: inline-block;
                     // padding-right: 1em;
                     box-sizing: border-box;
+
+                    a {
+                        // color: lighten($color: $blue, $amount: 50%);
+                        color: $white;
+                        font-weight: 700;
+                        @include tran(0.4s, ease);
+
+                        &:hover {
+                            color: $blueLighten;
+                        }
+                    }
                 }
             }
         }
@@ -523,7 +534,7 @@ section {
 
             .textSide {
                 height: 26.5em;
-                margin-top: 3.35em;
+                margin-top: 3.25em;
                 padding: 1em .5em 1em 2em;
                 font-size: 16px;
             }
@@ -751,27 +762,6 @@ section {
         margin-top: 40px;
         animation: moveDown .7s ease-out forwards;
 
-        // .product-slider {
-        //     height: auto;
-        //     overflow: inherit;
-        //     display: flex;
-        //     flex-wrap: wrap;
-        //     width: 90%;
-        //     height: auto;
-        //     overflow: inherit;
-
-
-        //     @include breakpoint('md', 'max') {
-        //         width: 80%;
-        //     }
-
-        //     @include breakpoint('sm', 'max') {
-        //         width: 100%;
-        //     }
-
-
-        // }
-
         .swiper-wrapper {
             overflow: inherit;
             flex-wrap: wrap;
@@ -839,7 +829,8 @@ section {
         }
 
         @include breakpoint('md', 'max') {
-            margin-top: 20px;
+            margin-top: 40px;
+            margin-bottom: 40px;
         }
     }
 
@@ -1442,11 +1433,19 @@ section {
     padding-top: 20px;
 
     .wrap {
+        margin-bottom: 1.5%;
 
         @include breakpoint('xl', 'max') {
             width: 100%;
             // margin: 0;
         }
+
+        // @include breakpoint('md', 'max'){
+        //     margin-bottom: 2%;
+        // }
+        // @include breakpoint('md', 'max'){
+        //     margin-bottom: 2%;
+        // }
     }
 
     h2 {
@@ -1467,6 +1466,7 @@ section {
             margin-right: auto;
 
         }
+
         @include breakpoint('md', 'max') {
             width: calc(94% + 20px);
 
@@ -1525,18 +1525,28 @@ section {
                     color: $golden;
                     transform: translateY(0);
                     opacity: 0;
+                    // opacity: 1;
                     font-weight: 600;
                     font-size: 14px;
                     @include tran(0.2s, ease-out);
 
                     img {
-                        height: .6em;
+                        height: 1.8em;
+                        line-height: .5;
                         margin-left: 5px;
+                        vertical-align: top;
+                        transform: scaleX(-1);
+                        display: inline-block;
                     }
+
                     @include breakpoint('md', 'max') {
                         opacity: 1;
+
+                        img {
+                            height: 1.5em;
+                        }
                     }
-                   
+
                 }
 
                 .card-body {
@@ -1581,24 +1591,25 @@ section {
                     @include breakpoint('xs', 'max') {
                         height: 360px;
                     }
+
                     @include breakpoint('lg', 'min') {
                         &:hover {
                             .card_img {
                                 height: 9.5rem;
                                 // transition: opacity 0.3s ease;
                                 filter: brightness(.8);
-    
+
                             }
-    
+
                             .more {
                                 transform: translateY(100%);
                                 opacity: 1;
-    
+
                             }
-    
+
                         }
                     }
-                    
+
 
 
                 }
@@ -1662,7 +1673,7 @@ section {
         // }
 
         .wrap {
-            padding: 40px 12px;
+            padding: 10px 12px;
 
         }
     }
@@ -1671,13 +1682,16 @@ section {
 
 .areaPartner {
     background-color: $bg_grey;
-
     border: 1px solid $bg_grey;
-    .warp{
+
+    .warp {
+        padding-top: 2.5rem;
+
         @include breakpoint('xl', 'max') {
             width: 96%;
             // margin: 0;
         }
+
         @include breakpoint('md', 'max') {
             width: 94%;
             // margin: 0;
@@ -1779,7 +1793,7 @@ section {
     }
 
     @include breakpoint('md', 'max') {
-        padding-top: 40px;
+        padding-top: 20px;
 
         .partnerList {
             margin: 30px 0 -25px 0;
@@ -1837,11 +1851,10 @@ section {
     display: flex;
     margin-top: 1em;
     padding: 5px;
-    // border: 1px solid red;
+    overflow: hidden; // 確保內容不溢出
 
     &::after,
     &::before {
-
         position: absolute;
         top: 0;
         z-index: 5;
@@ -1850,7 +1863,6 @@ section {
         height: 100%;
         display: block;
         background-color: $bg_grey;
-        // border: 1px solid red;
         filter: blur(5px);
     }
 
@@ -1863,15 +1875,23 @@ section {
     }
 
     &>ul {
-        // display: inline-block;
-        // padding-left: 0;       /* 起始位置為容器外部 */
-        animation: marquee 33s linear infinite;
-        text-transform: uppercase;
-        background-color: transparent;
+        display: flex; // 使用 flexbox 讓 li 水平排列
+        list-style: none; // 移除 li 的預設樣式
+        padding: 0; // 移除 ul 的預設 padding
+        margin: 0; // 移除 ul 的預設 margin
+        animation: marquee var(--marquee-duration, 20s) linear infinite;
+        white-space: nowrap; // 確保 li 不換行
+        flex-shrink: 0; // 防止 ul 被壓縮
 
+        &:nth-child(2) {
+            margin-left: -2px;
+        }
+    }
 
-
-
+    &>ul>li {
+        flex-shrink: 0; // 防止 li 被壓縮
+        background-color: $bg_grey;
+        border: 2px solid $bg_grey;
     }
 
     &:hover {
@@ -1879,10 +1899,8 @@ section {
             animation-play-state: paused;
         }
     }
-
-
-
 }
+
 
 .popup {
     position: fixed;

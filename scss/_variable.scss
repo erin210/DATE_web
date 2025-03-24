@@ -8,11 +8,15 @@
 }
 
 $blue:#21229D;
+$blueDarken:#234C98;
+$blueLighten:#8ddbfe;
+$blueBg:#E4EFF4;
 $golden:#CB9366;
 $goldLighten:#E3C7A2;
 $dark:#000027;
 $grey900:#3E3E3E;
 $grey800:#727171;
+$grey100:#D6D6D6;
 $greyLine:#D7D5D5;
 
 
@@ -35,7 +39,7 @@ $ll_blue:linear-gradient(145deg, #2457BD 0%, #1975ED 50%, #1949BA 100%);
 $ll_dark:linear-gradient(90deg, #1B1E27 0%, #08266C 60%, #07256B 87%, #212F50 100%);
 $ll_golden:linear-gradient(135deg, #B46A2F 0%, #F1B754 50%, #D98C33 100%);
 $ll_gold_hover:linear-gradient(135deg, #B46A2F 0%, #F1B754 30%, #D98C33 100%);
-$ll_grey:linear-gradient(180deg, #F9F9FC 0%, #FFFFFF 40%, #EAEAED 100%);
+$ll_grey:linear-gradient(180deg, #F9F9FC 0%, #FFFFFF 40%, #e3e3e6 100%);
 $ll_mask:linear-gradient(90deg, rgba($bg_grey, 0) 0%, rgba($bg_grey, 1) 96%);
 
 
