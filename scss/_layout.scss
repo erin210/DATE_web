@@ -34,13 +34,6 @@ header {
 
     }
 
-    // a {
-    //     // cursor: pointer !important;
-    //     border: 1px solid red;
-    //     display: block;
-    // }
-
-
     @include breakpoint('lg', 'max') {
         .wrap {
             width: 100%;
@@ -81,8 +74,9 @@ header {
         // margin-right: 5%;
 
         img {
-            width: 100%;
             display: block;
+            width: 100%;
+            height: auto;
         }
     }
 
@@ -179,9 +173,6 @@ header {
         justify-content: space-between;
         align-items: center;
         width: 20%;
-        // background-color: $dark;
-        // border-radius: $b-60;
-
 
         @include breakpoint('md', 'max') {
             width: 100%;
@@ -255,14 +246,11 @@ section {
 }
 
 .areaMainBN {
-    // position: fixed;
     z-index: 2;
     width: 100%;
-    // min-height: calc(100vh - 260px);
     color: $white;
     background-color: $dark;
 
-    // border: 1px solid #f00;
     @include breakpoint('sm', 'max') {
         min-height: 55%;
 
@@ -285,7 +273,6 @@ section {
     width: 100%;
     height: 100%;
     padding: 2% 0;
-    // border: 1px solid red;
     background: url(../img/about_bg.jpg) no-repeat center 0;
     background-size: cover;
     font-size: 100%;
@@ -319,7 +306,6 @@ section {
     }
 
     .aboutInfo {
-        // border: 1px solid red;
         display: flex;
         justify-content: center;
         width: 100%;
@@ -437,10 +423,8 @@ section {
                 clear: both;
                 float: left;
                 width: 100%;
-                // background: #fff;
                 background-color: #121212;
                 overflow: hidden;
-                // border: 2px solid red;
             }
 
             .tab_content {
@@ -602,7 +586,6 @@ section {
     .wrap {
         // width: 1200px;
         margin: 0 auto;
-        // border: 1px solid red;
         padding: 6% 0;
 
         @include breakpoint('xl', 'max') {
@@ -940,7 +923,6 @@ section {
             background: $goldLighten;
             // border: 1px solid $goldLighten;
 
-            // border: 1px solid red;
             @include breakpoint('md', 'max') {
                 top: 47px;
             }
@@ -1013,7 +995,7 @@ section {
                     }
 
                     h3 {
-                        padding-right: .5em;
+                        padding-right: .1em;
                         text-align: right;
                         transform: skew(-30deg);
                     }
@@ -1043,7 +1025,7 @@ section {
                             }
 
                             @include breakpoint('xs', 'max') {
-                                padding-right: 11vw;
+                                padding-right: 8vw;
                             }
 
                         }
@@ -1057,7 +1039,7 @@ section {
                     }
 
                     h3 {
-                        padding-left: .5em;
+                        padding-left: .1em;
                         text-align: left;
                         transform: skew(30deg);
                     }
@@ -1086,7 +1068,7 @@ section {
                             }
 
                             @include breakpoint('xs', 'max') {
-                                padding-left: 11vw;
+                                padding-left: 8vw;
                             }
                         }
                     }
@@ -1579,7 +1561,6 @@ section {
                     text-decoration: none;
                     @include tran(0.2s, ease-in-out);
 
-                    // border: 1px solid red;
                     @include breakpoint('md', 'max') {
                         height: 25rem;
                     }
@@ -1859,7 +1840,7 @@ section {
         top: 0;
         z-index: 5;
         content: "";
-        width: 30px;
+        width: 40px;
         height: 100%;
         display: block;
         background-color: $bg_grey;
@@ -1867,11 +1848,11 @@ section {
     }
 
     &::before {
-        left: -15px;
+        left: -20px;
     }
 
     &::after {
-        right: -15px;
+        right: -20px;
     }
 
     &>ul {
@@ -1899,6 +1880,16 @@ section {
             animation-play-state: paused;
         }
     }
+
+    @include breakpoint('sm', 'max') {
+        &::before {
+            left: -25px;
+        }
+
+        &::after {
+            right: -25px;
+        }
+    }
 }
 
 
@@ -1908,22 +1899,17 @@ section {
     height: 100%;
     top: 0;
     left: 0;
-    // padding-left: 8%;
     background-color: rgba(#000000, 0.65);
     z-index: 999999;
     display: flex;
     justify-content: center;
     align-items: center;
-    // transition: opacity 0.5s ease-in-out;
 
     .container {
         display: flex;
         justify-content: center;
         align-items: center;
-        // border: 1px solid #f00;
-        // padding-left: calc(22% - 20px);
         box-sizing: border-box;
-        // height: 100%;
     }
 
     .popup_left {

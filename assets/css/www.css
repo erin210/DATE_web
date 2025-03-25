@@ -542,8 +542,9 @@ header .logo {
   padding-top: 0;
 }
 header .logo img {
-  width: 100%;
   display: block;
+  width: 100%;
+  height: auto;
 }
 header #sidr a {
   color: #fff;
@@ -1270,7 +1271,7 @@ section h2::after {
   transform: skew(30deg);
 }
 .areaAganda .wrap ul.tabs li.day1 h3 {
-  padding-right: 0.5em;
+  padding-right: 0.1em;
   text-align: right;
   transform: skew(-30deg);
 }
@@ -1298,14 +1299,14 @@ section h2::after {
 }
 @media (max-width: 575.98px) {
   .areaAganda .wrap ul.tabs li.day1.active h3 {
-    padding-right: 11vw;
+    padding-right: 8vw;
   }
 }
 .areaAganda .wrap ul.tabs li.day2 > div {
   transform: skew(-30deg);
 }
 .areaAganda .wrap ul.tabs li.day2 h3 {
-  padding-left: 0.5em;
+  padding-left: 0.1em;
   text-align: left;
   transform: skew(30deg);
 }
@@ -1334,7 +1335,7 @@ section h2::after {
 }
 @media (max-width: 575.98px) {
   .areaAganda .wrap ul.tabs li.day2.active h3 {
-    padding-left: 11vw;
+    padding-left: 8vw;
   }
 }
 .areaAganda .wrap ul.tabs li:hover {
@@ -1922,17 +1923,17 @@ section h2::after {
   top: 0;
   z-index: 5;
   content: "";
-  width: 30px;
+  width: 40px;
   height: 100%;
   display: block;
   background-color: #F9F9FC;
   filter: blur(5px);
 }
 .marquee::before {
-  left: -15px;
+  left: -20px;
 }
 .marquee::after {
-  right: -15px;
+  right: -20px;
 }
 .marquee > ul {
   display: flex;
@@ -1953,6 +1954,14 @@ section h2::after {
 }
 .marquee:hover > ul {
   animation-play-state: paused;
+}
+@media (max-width: 767.98px) {
+  .marquee::before {
+    left: -25px;
+  }
+  .marquee::after {
+    right: -25px;
+  }
 }
 
 .popup {
