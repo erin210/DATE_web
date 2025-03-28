@@ -507,7 +507,7 @@ header .wrap {
   align-items: center;
   width: 100%;
   margin: 0 auto;
-  padding: 0.8em 24px;
+  padding: 0.53em 24px;
   box-sizing: border-box;
 }
 @media (max-width: 1199.98px) {
@@ -517,7 +517,7 @@ header .wrap {
 }
 @media (max-width: 991.98px) {
   header .wrap {
-    padding: 1em;
+    padding: 0.6em 1em;
   }
 }
 header nav {
@@ -538,13 +538,13 @@ header nav a:hover {
 header .logo {
   position: relative;
   z-index: 999;
-  width: 135px;
+  height: 40px;
   padding-top: 0;
 }
 header .logo img {
   display: block;
-  width: 100%;
-  height: auto;
+  width: auto;
+  height: 100%;
 }
 header #sidr a {
   color: #fff;
@@ -619,7 +619,7 @@ header .logo_side {
     width: 100%;
   }
   header .logo_side .logo {
-    width: 80px;
+    height: 30px;
   }
 }
 
@@ -1357,7 +1357,7 @@ section h2::after {
 }
 @media (max-width: 767.98px) {
   .areaAganda .wrap ul.tabs li.active {
-    width: 70%;
+    width: 68%;
   }
 }
 .areaAganda .wrap ul.tabs li.active > div {
@@ -1398,19 +1398,18 @@ section h2::after {
 .areaAganda .wrap .tab_content article {
   padding: 4% 0;
 }
+.areaAganda .wrap .tab_content article > ul > li {
+  min-width: 70%;
+  max-width: 90%;
+}
 .areaAganda .wrap .tab_content article ul > li {
-  width: 60%;
+  width: 100%;
   display: flex;
   align-items: center;
   margin: auto;
   margin-top: 0.8rem;
   padding: 1.2rem 0 0.5rem 0;
   border-top: 1px solid #D7D5D5;
-}
-@media (max-width: 1399.98px) {
-  .areaAganda .wrap .tab_content article ul > li {
-    width: 75%;
-  }
 }
 .areaAganda .wrap .tab_content article ul > li .aganda_time {
   width: 5em;
@@ -1425,6 +1424,7 @@ section h2::after {
   width: 100%;
 }
 .areaAganda .wrap .tab_content article ul > li .aganda_in h5 {
+  display: block;
   font-size: 24px;
   font-weight: 600;
   color: #3E3E3E;
@@ -1446,6 +1446,7 @@ section h2::after {
 }
 .areaAganda .wrap .tab_content article ul > li .aganda_in .card_txt span {
   color: #727171;
+  font-size: 15px;
   font-weight: 400;
   line-height: 1.2;
 }
@@ -1812,12 +1813,16 @@ section h2::after {
   font-weight: 600;
   color: #3E3E3E;
 }
+.areaPartner .logoBox p {
+  display: flex;
+  flex-wrap: wrap;
+}
 .areaPartner .logoBox a {
-  height: 4.2rem;
-  display: block;
+  height: 4rem;
+  margin-right: 12px;
 }
 .areaPartner .logoBox a > img {
-  height: 100%;
+  height: 90%;
   filter: grayscale(100%);
   mix-blend-mode: multiply;
   opacity: 0.5;
@@ -1829,7 +1834,6 @@ section h2::after {
   transition: all 0.3s ease-out 0s;
 }
 .areaPartner .logoBox a:hover > img {
-  height: 100%;
   filter: grayscale(0) contrast(1.2);
   opacity: 1;
   margin-top: -2px;
@@ -1845,7 +1849,6 @@ section h2::after {
 }
 .areaPartner .logoBox ul li a {
   height: 100%;
-  display: block;
 }
 .areaPartner .logoBox ul li a > img {
   height: 100%;
@@ -2019,7 +2022,7 @@ section h2::after {
   text-decoration: none;
 }
 .popup .popup_wrapper .content.card figure {
-  width: 30%;
+  width: 178px;
 }
 .popup .popup_wrapper .content.card figcaption {
   width: 70%;
@@ -2060,7 +2063,7 @@ section h2::after {
     align-items: center;
   }
   .popup .popup_wrapper .content.card figure {
-    width: 50%;
+    width: 150px;
     margin-bottom: 1rem;
   }
   .popup .popup_wrapper .content.card figcaption {

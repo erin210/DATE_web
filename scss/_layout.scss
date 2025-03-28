@@ -28,7 +28,7 @@ header {
         align-items: center;
         width: 100%;
         margin: 0 auto;
-        padding: .8em 24px;
+        padding: .53em 24px;
         box-sizing: border-box;
 
 
@@ -42,7 +42,7 @@ header {
 
     @include breakpoint('md', 'max') {
         .wrap {
-            padding: 1em;
+            padding: .6em 1em;
         }
     }
 
@@ -69,14 +69,17 @@ header {
     .logo {
         position: relative;
         z-index: 999;
-        width: 135px;
+        // width: 135px;
+        height: 40px;
         padding-top: 0;
         // margin-right: 5%;
 
         img {
             display: block;
-            width: 100%;
-            height: auto;
+            // width: 100%;
+            // height: auto;
+            width: auto;
+            height: 100%;
         }
     }
 
@@ -179,7 +182,8 @@ header {
             // padding-right: 10px;
 
             .logo {
-                width: 80px;
+                // width: 80px;
+                height: 30px;
             }
         }
     }
@@ -1094,7 +1098,7 @@ section {
                     }
 
                     @include breakpoint('sm', 'max') {
-                        width: 70%;
+                        width: 68%;
 
                     }
 
@@ -1164,9 +1168,19 @@ section {
             article {
                 padding: 4% 0;
 
+                &>ul {
+                    &>li {
+                        min-width: 70%;
+                        max-width: 90%;
+
+                    }
+                }
+
                 ul {
                     &>li {
-                        width: 60%;
+                        width: 100%;
+                        // min-width: 70%;
+                        // max-width: 90%;
                         display: flex;
                         align-items: center;
                         margin: auto;
@@ -1174,10 +1188,10 @@ section {
                         padding: 1.2rem 0 .5rem 0;
                         border-top: 1px solid $greyLine;
 
-                        @include breakpoint('xl', 'max') {
+                        // @include breakpoint('xl', 'max') {
 
-                            width: 75%;
-                        }
+                        //     width: 75%;
+                        // }
 
                         .aganda_time {
                             width: 5em;
@@ -1193,6 +1207,7 @@ section {
                             width: 100%;
 
                             h5 {
+                                display: block;
                                 font-size: 24px;
                                 font-weight: 600;
                                 color: $grey900;
@@ -1217,6 +1232,7 @@ section {
 
                                 span {
                                     color: $grey800;
+                                    font-size: 15px;
                                     font-weight: 400;
                                     line-height: 1.2;
                                 }
@@ -1699,12 +1715,18 @@ section {
             color: $grey900;
         }
 
+        p {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
         a {
-            height: 4.2rem;
-            display: block;
+            height: 4rem;
+            // display: inline-block;
+            margin-right: 12px;
 
             &>img {
-                height: 100%;
+                height: 90%;
                 filter: grayscale(100%);
                 mix-blend-mode: multiply;
                 opacity: .5;
@@ -1715,7 +1737,7 @@ section {
 
             &:hover {
                 &>img {
-                    height: 100%;
+                    // height: 100%;
                     filter: grayscale(0) contrast(1.2);
                     opacity: 1;
                     margin-top: -2px;
@@ -1735,7 +1757,6 @@ section {
 
                 a {
                     height: 100%;
-                    display: block;
 
                     &>img {
                         height: 100%;
@@ -1955,11 +1976,10 @@ section {
             &.card {
                 // display: flex;
                 overflow-y: auto;
-
                 text-decoration: none;
 
                 figure {
-                    width: 30%;
+                    width: 178px;
                 }
 
                 figcaption {
@@ -2014,7 +2034,7 @@ section {
                 &.card {
 
                     figure {
-                        width: 50%;
+                        width: 150px;
                         margin-bottom: 1rem;
                     }
 
