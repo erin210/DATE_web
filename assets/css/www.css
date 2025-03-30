@@ -1089,7 +1089,7 @@ section h2::after {
 }
 .areaSpeaker .openSpeaker .swiper-wrapper .item a.card {
   display: block;
-  padding: 0 10px;
+  padding: 0;
   margin-bottom: 2rem;
 }
 @media (max-width: 1199.98px) {
